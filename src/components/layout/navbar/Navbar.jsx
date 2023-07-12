@@ -1,21 +1,48 @@
 import { Button } from "@mui/material";
 import CartWidget from "../../common/cartWidget/CartWidget";
 import "./Navbar.css";
+import { Link, Outlet } from "react-router-dom";
 
 const Navbar = () => {
-  let cantCarrito = 3;
   return (
-    <div className="navContainer">
-      <h4>El Rincon</h4>
-      <ul className="containerCategories">
-        <li>
-          <Button variant="contained">Inicio</Button>
-        </li>
-        <li>
-          <Button variant="contained">Generos</Button>
-        </li>
-      </ul>
-      <CartWidget cantCarrito={cantCarrito} />
+    <div>
+      <div className="navContainer">
+        <Link to="/">El Rincon</Link>
+        <ul className="containerCategories">
+          <li>
+            <Link to="/">
+              <Button variant="contained">Inicio</Button>
+            </Link>
+          </li>
+          <li>
+            <Link to="/category/Aventura">
+              <Button variant="contained">Aventura</Button>
+            </Link>
+          </li>
+          <li>
+            <Link to="/category/Ficcion">
+              <Button variant="contained">Ficcion</Button>
+            </Link>
+          </li>
+          <li>
+            <Link to="/category/Policial">
+              <Button variant="contained">Policial</Button>
+            </Link>
+          </li>
+          <li>
+            <Link to="/category/Romantico">
+              <Button variant="contained">Romantico</Button>
+            </Link>
+          </li>
+          <li>
+            <Link to="/category/Terror">
+              <Button variant="contained">Terror</Button>
+            </Link>
+          </li>
+        </ul>
+        <CartWidget />
+      </div>
+      <Outlet />
     </div>
   );
 };

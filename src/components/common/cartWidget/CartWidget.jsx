@@ -1,16 +1,17 @@
 import { BsFillCartFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-import React from "react";
-
-const CartWidget = ({ cantCarrito }) => {
+const CartWidget = () => {
   return (
-    <div>
-      {/* icono de carrito*/}
-      <div>
-        <h5>{cantCarrito}</h5>
-      </div>
-      <BsFillCartFill color="black" size="40px" />
-    </div>
+    <>
+      <Link to="/cart">
+        <div>
+          {/* icono de carrito*/}
+
+          <BsFillCartFill color="black" size="40px" />
+        </div>
+      </Link>
+    </>
   );
 };
 
