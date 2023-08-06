@@ -1,23 +1,31 @@
 import { useState, useEffect } from "react";
-import { products } from "../../../productsMock";
 import ItemLIst from "./ItemLIst";
 import { useParams } from "react-router-dom";
+import { db } from "../../../firebaseConfig";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { Category } from "@mui/icons-material";
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   const { generoName } = useParams();
 
   useEffect(() => {
-    let productosFiltrados = products.filter(
-      (elemento) => elemento.genero === generoName
-    );
-    const tarea = new Promise((resolve, reject) => {
-      resolve(generoName ? productosFiltrados : products);
-    });
+    let consulta;
 
-    tarea
-      .then((respuesta) => setItems(respuesta))
-      .catch((error) => console.log(error));
+    let productsCollection = collection(db, "products");
+
+    if (!generoName) {
+      consulta = productsCollection;
+    } else {
+      consulta = query(productsCollection, where("genero", "==", generoName));
+    }
+
+    getDocs(consulta).then((res) => {
+      let arrayProductos = res.docs.map((product) => {
+        return { ...product.data(), id: product.id };
+      });
+      setItems(arrayProductos);
+    });
   }, [generoName]);
 
   return <ItemLIst items={items} />;

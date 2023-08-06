@@ -1,7 +1,8 @@
 export const products = [
 
     {
-        id: 1,
+
+        stock: 7,
         title: "Cien años de soledad",
         price: 7500,
         author: "Gabriel García Márquez",
@@ -10,7 +11,8 @@ export const products = [
         img: "https://res.cloudinary.com/dottjemxj/image/upload/v1689033277/medium_ixgmdo.jpg"
     },
     {
-        id: 2,
+
+        stock: 7,
         title: "La mano izquierda de la oscuridad",
         price: 9500,
         author: "Ursula K. Le Guin",
@@ -19,7 +21,8 @@ export const products = [
         img: "https://res.cloudinary.com/dottjemxj/image/upload/v1689033315/portada_la-mano-izquierda-de-la-oscuridad_ursula-k-le-guin_202006041508_cnzmbe.webp"
     },
     {
-        id: 3,
+
+        stock: 7,
         title: "It",
         price: 10000,
         author: "Stephen King",
@@ -28,7 +31,8 @@ export const products = [
         img: "https://res.cloudinary.com/dottjemxj/image/upload/v1689033384/2e004a40fd5c55013d75b50fa02a951e_ev4fmx.jpg"
     },
     {
-        id: 4,
+
+        stock: 7,
         title: "Involución",
         price: 15000,
         author: "Max Brooks",
@@ -38,7 +42,8 @@ export const products = [
     },
 
     {
-        id: 5,
+
+        stock: 7,
         title: "El prisionero de Zenda",
         price: 9500,
         author: "Anthony Hope",
@@ -47,7 +52,8 @@ export const products = [
         img: "https://res.cloudinary.com/dottjemxj/image/upload/v1689033244/El-prisionero-de-Zenda-154x233_xszfat.jpg"
     },
     {
-        id: 6,
+
+        stock: 7,
         title: "Los tres mosqueteros",
         price: 8500,
         author: "Alejandro Dumas",
@@ -56,7 +62,8 @@ export const products = [
         img: "https://res.cloudinary.com/dottjemxj/image/upload/v1689033128/9788469808412-los-tres-mosqueteros-clasicos-a-medida_zo12ab.jpg"
     },
     {
-        id: 7,
+
+        stock: 7,
         title: "Viaje al centro de la Tierra",
         price: 11000,
         author: "Julio Verne",
@@ -65,7 +72,8 @@ export const products = [
         img: "https://res.cloudinary.com/dottjemxj/image/upload/v1689033062/19302624155_c3zum4.jpg"
     },
     {
-        id: 8,
+
+        stock: 7,
         title: "Estudio en escarlata",
         price: 7500,
         author: "Arthur Conan Doyle",
@@ -74,7 +82,8 @@ export const products = [
         img: "https://res.cloudinary.com/dottjemxj/image/upload/v1689032934/625452f9a6137d58b8b112d5_6034d7d1f3e0f5af57b2b268_Estudio-en-escarlata-el-signo-de-los-cuatro-arthur-conan-doyle-editorial-alma_ogxh5m.jpg"
     },
     {
-        id: 9,
+
+        stock: 7,
         title: "La Dalia Negra",
         price: 10500,
         author: "James Ellroy",
@@ -83,7 +92,8 @@ export const products = [
         img: "https://res.cloudinary.com/dottjemxj/image/upload/v1689032874/9788439729297_tv2tsy.jpg"
     },
     {
-        id: 10,
+
+        stock: 7,
         title: "Nosotros en la luna",
         price: 7500,
         author: "Alice Kellen",
@@ -91,5 +101,6 @@ export const products = [
         genero: "Romantico",
         img: "https://res.cloudinary.com/dottjemxj/image/upload/v1689032780/310721_portada_nosotros-en-la-luna_alice-kellen_201911261050_cmh0gy.jpg"
     },
+
 
 ]

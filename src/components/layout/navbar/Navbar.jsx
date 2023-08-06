@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import CartWidget from "../../common/cartWidget/CartWidget";
 import "./Navbar.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -40,9 +40,10 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
+        <Link to="/dashboard">ADMIN</Link>
+
         <CartWidget />
       </div>
-      <Outlet />
     </div>
   );
 };
