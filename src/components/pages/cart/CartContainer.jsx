@@ -8,28 +8,32 @@ const CartContainer = () => {
     useContext(CartContext);
   let precio = getTotalPrice();
   return (
-    <div>
+    <div style={{ background: "blueviolet" }}>
       {cart.map((elemento) => {
         return (
           <div
             key={elemento.id}
-            style={{ width: "200px", border: "2px solid steelblue" }}
+            style={{ width: "200px", border: "5px solid blue" }}
           >
             <h3>{elemento.title}</h3>
             <h3>{elemento.price}</h3>
             <h3>{elemento.quantity}</h3>
-            <Button onClick={() => deleteById(elemento.id)}>Eliminar</Button>
+            <Button variant="contained" onClick={() => deleteById(elemento.id)}>
+              Eliminar
+            </Button>
           </div>
         );
       })}
 
       {cart.length > 0 ? (
         <div>
-          <Button onClick={clearCart}>Limpiar</Button>
+          <Button variant="contained" onClick={clearCart}>
+            Limpiar
+          </Button>
 
           <h2> Total: ${precio}</h2>
           <Link to="/checkout">
-            <Button>Finalizar compra</Button>
+            <Button variant="contained">Finalizar compra</Button>
           </Link>
         </div>
       ) : (

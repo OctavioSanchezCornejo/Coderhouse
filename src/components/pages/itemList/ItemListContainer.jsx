@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import ItemLIst from "./ItemLIst";
+import ItemLIst from "./ItemList";
 import { useParams } from "react-router-dom";
-import { db } from "../../../firebaseConfig";
+import { db } from "../../../fireBaseConfig";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { Category } from "@mui/icons-material";
 const ItemListContainer = () => {

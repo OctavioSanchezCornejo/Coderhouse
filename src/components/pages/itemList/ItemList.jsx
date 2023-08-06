@@ -10,6 +10,7 @@ const ItemLIst = ({ items }) => {
         flexWrap: "wrap",
         paddingTop: "25px",
         gap: "20px",
+        background: "blueviolet",
       }}
     >
       {items.map((item) => {

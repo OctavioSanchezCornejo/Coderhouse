@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import { db } from "../../../firebaseConfig";
+import { db } from "../../../fireBaseConfig";
 import {
   addDoc,
   collection,
@@ -47,8 +47,8 @@ const CheckoutContainer = () => {
   };
 
   return (
-    <div>
-      <h1>CheckoutContainer</h1>
+    <div style={{ background: "blueviolet" }}>
+      <h1 style={{ background: "blueviolet" }}>CheckoutContainer</h1>
       {orderId ? (
         <h3>Su numero de compra: {orderId}</h3>
       ) : (

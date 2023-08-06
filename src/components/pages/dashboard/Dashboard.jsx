@@ -11,7 +11,7 @@ const Dashboard = () => {
     });
   };
   return (
-    <div>
+    <div style={{ background: "blueviolet" }}>
       <h1>Dashboard</h1>
       <Button variant="contained" onClick={rellenar}>
         Rellenar base de datos
